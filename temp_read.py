@@ -72,7 +72,8 @@ except:
 if first_hour == None:
     first_hour = cur_hour
     # compute hours from two times
-v2 = 666
+hr_diff = cur_hour - datetime.datetime.strptime(first_hour,"%Y-%m-%d %H:%M:%S.%f")
+v2 = hr_diff.seconds//3600
 
 print(first_hour)
 print(cur_hour)
