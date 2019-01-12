@@ -1,4 +1,4 @@
 SELECT *
 FROM temp_log
-ORDER BY rec_time
-LIMIT 10;
+ORDER BY lapse_hour desc
+LIMIT 20;

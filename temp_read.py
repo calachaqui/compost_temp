@@ -70,13 +70,14 @@ except:
     first_hour = datetime.datetime.now()
 
 if first_hour == None:
-    first_hour = cur_hour
+    first_hour = str(cur_hour)
     # compute hours from two times
 hr_diff = cur_hour - datetime.datetime.strptime(first_hour,"%Y-%m-%d %H:%M:%S.%f")
-v2 = hr_diff.seconds//3600
+v2 = (hr_diff.days*24) + (hr_diff.seconds//3600)
 
 print(first_hour)
 print(cur_hour)
+print(v2)
 
 # insert data into temp_log
 stmnt = """INSERT INTO temp_log (
