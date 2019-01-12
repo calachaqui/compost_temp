@@ -2,6 +2,10 @@
 # get data from thermometer
 import sys,os,time,datetime
 
+#create a working path
+wdpath = os.getcwd()
+dbpath = '%s/comp_read.db'%wdpath
+
 #os.system('modprobe w1-gpio')
 #os.system('modprobe w1-gpio')
 #
@@ -37,7 +41,7 @@ import sqlite3
 from sqlite3 import Error
 
 try:
-    conn = sqlite3.connect('/home/slice/compute/compost_temp/comp_read.db')
+    conn = sqlite3.connect(dbpath)
 except Error as e:
     print(e)
     sys.exit("create database failed")
