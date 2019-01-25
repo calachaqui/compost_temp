@@ -1,0 +1,15 @@
+current issues
+-can't get a read from the thermometer
+  reasons could be:
+    bad wiring
+    bad pinout
+    bad thermometers(not likely since two have failed.
+  how to fix:
+    wire the thermometer without the breadboard
+    test different 3v3 and ground pins on the pi
+    test other sensors provided
+
+  supplies needed:
+    wire strippers
+    jumper wires
+    fastening substance
